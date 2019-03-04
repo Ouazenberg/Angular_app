@@ -1,0 +1,38 @@
+<p></p>
+<div class="container">
+  <div class="card">
+    <div class="card-header bg-primary">Gallery Compnent</div>
+    <div class="card-body">
+      
+      <form #f="ngForm" (ngSubmit)="onSearch(f.value)">
+        <div class="form-group">
+          <label>Mot Clé: </label>
+          <input type="text" name="motCle" ngModel required>
+          <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Chercher</button>
+        </div>
+      </form>
+      
+      <div class="row">
+      <div *ngFor="let p of pagePhotos?.hits" class="col-md-3 sp">
+        <div class="card cadre">
+          <div class="card-header bg-primary">
+            <strong>{{p.user}}</strong> <img class="rounded-circle user" src="{{p.userImageURL}}">
+          </div>
+          <div class="card-body">
+            <img class="img" src="{{p.previewURL}}">
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div>
+        <ul>
+          <li *ngFor="let page of pages">
+            {{page}}
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>

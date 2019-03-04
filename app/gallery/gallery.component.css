@@ -1,0 +1,16 @@
+.cadre{
+    height: 300px;
+}
+
+.sp{
+    padding-top: 40px;
+}
+.user{
+    height: 50px;
+    width: 50px;
+    float: right;
+}
+.img{
+    height: 180px;
+    width: 200px;
+}
